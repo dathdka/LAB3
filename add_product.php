@@ -5,13 +5,14 @@
     if(isset($_POST["btnsubmit"]))
     {
         $productName = $_POST["txtName"];
+        $prodcuctID = $_POST["txtprodcuctID"];
         $cateID = $_POST["txtcateID"];
         $price = $_POST["txtprice"];
         $quantity = $_POST["txtquantity"];
         $description = $_POST["txtdescription"];
         $picture = $_POST["txtpicture"];
 
-        $newProduct = new Product($productName, $cateID, $price, $quantity, $description, $picture);
+        $newProduct = new Product($productName, $productID, $cateID, $price, $quantity, $description, $picture);
 
         $result = $newProduct -> save();
         if(!$result)
