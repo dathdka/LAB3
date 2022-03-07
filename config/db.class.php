@@ -16,7 +16,7 @@
         public function query_execute($queryString)
         {
             $connection = $this->connect();
-            $result = $connection->query_execute($queryString);
+            $result = $connection->query($queryString);
             $connection -> close();
             return $result;
         }

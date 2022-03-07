@@ -12,6 +12,7 @@
         $uploadOk = 1;
         $target_dir = "uploads/";
         $target_file = $target_dir. basename($_FILES["fileToUpload"]["name"]);
+        $picture = basename($_FILES["fileToUpload"]["name"]);
         if(file_exists($target_file))
         {
             echo "da trung anh";
@@ -30,7 +31,7 @@
             move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file);
         }
 
-        $newProduct = new Product($productID , $productName, $cateID, $price, $quantity, $description, $target_file);
+        $newProduct = new Product($productID , $productName, $cateID, $price, $quantity, $descript, $piture);
 
         $result = $newProduct -> save();
         if(!$result)
