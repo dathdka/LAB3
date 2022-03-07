@@ -30,5 +30,13 @@
             $result;
         }
 
+        public static function list_product()
+        {
+            $db = new Db();
+            $sql = "SELECT * FROM product";
+            $result = $db->Select_to_array($sql);
+            return $result;
+        }
+
     }
 ?>
