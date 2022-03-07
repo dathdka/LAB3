@@ -9,7 +9,7 @@
 </head>
 <body>
     <?php 
-        require_once("/entities/product.class.php");
+        require_once("Entities/product.class.php");
     ?>
     <?php
         include_once("header.php");

@@ -10,9 +10,8 @@
         public $description;
         public $picture;
 
-        public function __construct($productID, $productName,$cateID, $price, $quantity,$description, $picture)
+        public function __construct( $productName,$cateID, $price, $quantity,$description, $picture)
         {
-            $this->productID = $productID;
             $this->productName = $productName;
             $this->cateID = $cateID;
             $this->price = $price;
@@ -24,7 +23,7 @@
         public function save()
         {
             $db = new Db();
-            $sql = "INSERT INTO product (productID, productName, cateId, price, quantity, description, Picture) VALUES
+            $sql = "INSERT INTO product (productName, cateId, price, quantity, description, Picture) VALUES
             ( '$this->productName', '$this->CateID', '$this->price', '$this->quantity', '$this->description', '$this->picture')";
             $result = $db->query_execute($sql);
             $result;

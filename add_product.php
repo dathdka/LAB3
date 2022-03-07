@@ -1,18 +1,36 @@
-
 <?php
     require_once("Entities/product.class.php");
 
     if(isset($_POST["btnsubmit"]))
     {
+        
         $productName = $_POST["txtName"];
-        $prodcuctID = $_POST["txtprodcuctID"];
-        $cateID = $_POST["txtcateID"];
-        $price = $_POST["txtprice"];
-        $quantity = $_POST["txtquantity"];
-        $description = $_POST["txtdescription"];
-        $picture = $_POST["txtpicture"];
+        $cateID = $_POST["txtCateID"];
+        $price = $_POST["txtPrice"];
+        $quantity = $_POST["txtQuantity"];
+        $description = $_POST["txtdesc"];
+        $uploadOk = 1;
+        $target_dir = "uploads/";
+        $target_file = $target_dir. basename($_FILES["fileToUpload"]["name"]);
+        if(file_exists($target_file))
+        {
+            echo "da trung anh";
+            $uploadOk = 0; 
+        }
+        if ($_FILES["fileToUpload"]["size"]>500000) {
+            echo "da vuot qua gioi han";
+            $uploadOk = 0;
+        }
+        if($uploadOk == 0)
+        {
+            echo "upload that bai";
+        }
+        else
+        {
+            move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file);
+        }
 
-        $newProduct = new Product($productName, $productID, $cateID, $price, $quantity, $description, $picture);
+        $newProduct = new Product($productName, $productID, $cateID, $price, $quantity, $description, $target_file);
 
         $result = $newProduct -> save();
         if(!$result)
@@ -34,7 +52,8 @@
 ?>
 
 
-<form method="post">
+
+<form action="upload.php"method="POST" enctype="multipart/form-data">
     <div class= "row">
         <div class = "lbltitle">
             <label>Tên sản phẩm</label>
@@ -58,7 +77,7 @@
         <label> Số lượng sản phẩm</label>
     </div>
     <div class = "lblinput">
-        <input type="number" name="txtquantity" value="<?php echo isset($_POST["txtquatity"]) ? $_POST["txtquatity"] : "" ; ?>" />
+        <input type="number" name="txtQuantity" value="<?php echo isset($_POST["txtQuantity"]) ? $_POST["txtquatity"] : "" ; ?>" />
     </div>
 </div>
 
@@ -67,7 +86,7 @@
         <label>Giá sản phẩm</label>
     </div>
     <div class = "lblinput">
-        <input type="number" name="txtprice" value="<?php echo isset($_POST["txtprice"]) ? $_POST["txtprice"] : "" ; ?>" />
+        <input type="number" name="txtPrice" value="<?php echo isset($_POST["txtPrice"]) ? $_POST["txtprice"] : "" ; ?>" />
     </div>
 </div>
 
@@ -76,7 +95,7 @@
         <label>Loại sản phẩm</label>
     </div>
     <div class = "lblinput">
-        <input type="text" name="txtproduct" value="<?php echo isset($_POST["txtproduct"]) ? $_POST["txtproduct"] : "" ?>" />
+        <input type="text" name="txtCateID" value="<?php echo isset($_POST["txtCateID"]) ? $_POST["txtproduct"] : "" ?>" />
     </div>
 </div>
 
@@ -85,7 +104,7 @@
         <label>Hình ảnh sản phẩm</label>
     </div>
     <div class = "lblinput">
-        <input type="picture" name="txtpicture" value="<?php echo isset($_POST["txtpicture"]) ? $_POST["txtpicture"] : "" ; ?>" />
+        <input type="file" name="fileToUpload" id="fileToUpload">
     </div>
 </div>
 
