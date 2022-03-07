@@ -26,7 +26,7 @@
             $db = new Db();
             $sql = "INSERT INTO product (productID, productName, cateId, price, quantity, description, Picture) VALUES
             ( '$this->productName', '$this->CateID', '$this->price', '$this->quantity', '$this->description', '$this->picture')";
-            $result = $db->query($sql);
+            $result = $db->query_execute($sql);
             $result;
         }
 

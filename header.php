@@ -5,6 +5,7 @@
         <meta name="author" content="Hoang Dat">
         <link href="/LAB3/site.css" rel="stylesheet">
         <title>web ban hang</title>
+        <link href="/index.html" rel="stylesheet"></link>
     </head>
     <body>
         <div id="wrapper">
