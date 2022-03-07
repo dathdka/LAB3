@@ -3,12 +3,12 @@
 
     if(isset($_POST["btnsubmit"]))
     {
-        
+        $productID = "";
         $productName = $_POST["txtName"];
         $cateID = $_POST["txtCateID"];
         $price = $_POST["txtPrice"];
         $quantity = $_POST["txtQuantity"];
-        $description = $_POST["txtdesc"];
+        $description = $_POST["txtDesc"];
         $uploadOk = 1;
         $target_dir = "uploads/";
         $target_file = $target_dir. basename($_FILES["fileToUpload"]["name"]);
@@ -30,7 +30,7 @@
             move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file);
         }
 
-        $newProduct = new Product($productName, $cateID, $price, $quantity, $description, $target_file);
+        $newProduct = new Product($productID , $productName, $cateID, $price, $quantity, $description, $target_file);
 
         $result = $newProduct -> save();
         if(!$result)

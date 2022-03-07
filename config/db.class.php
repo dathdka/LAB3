@@ -6,7 +6,7 @@
         {
             if(!isset(self::$connection)){
                 $config = parse_ini_file("config.ini");
-                self::$connection = new mysqli("localhost", $config["username"], $config["password"], $config["databasename"]);
+                self::$connection = new mysqli("localhost", $config["username"], $config["password"], $config["databases"]);
             }
             if(self::$connection==false){
                 return false;
@@ -16,7 +16,7 @@
         public function query_execute($queryString)
         {
             $connection = $this->connect();
-            $result = $this-> query_execute($queryString);
+            $result = $connection->query_execute($queryString);
             $connection -> close();
             return $result;
         }

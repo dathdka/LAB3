@@ -2,7 +2,7 @@
 
 
 
-<form method="post" enctype="multipart/form-data">
+<form action="upload.php" method="POST" enctype="multipart/form-data">
     <div class= "row">
         <div class = "lbltitle">
             <label>Tên sản phẩm</label>
@@ -17,7 +17,7 @@
         <label>Mô tả sản phẩm</label>
     </div>
     <div class = "lblinput">
-        <textarea name="txtdesc" cols="21" rows="10" value="<?php echo isset($_POST["txtdesc"]) ? $_POST["txtdesc"] : "" ; ?>" ></textarea>
+        <textarea name="txtDesc" cols="21" rows="10" value="<?php echo isset($_POST["txtDesc"]) ? $_POST["txtDesc"] : "" ; ?>" ></textarea>
     </div>
 </div>
 
@@ -26,7 +26,7 @@
         <label> Số lượng sản phẩm</label>
     </div>
     <div class = "lblinput">
-        <input type="number" name="txtQuantity" value="<?php echo isset($_POST["txtQuantity"]) ? $_POST["txtquatity"] : "" ; ?>" />
+        <input type="number" name="txtQuantity" value="<?php echo isset($_POST["txtQuantity"]) ? $_POST["txtQuantity"] : "" ; ?>" />
     </div>
 </div>
 
@@ -35,7 +35,7 @@
         <label>Giá sản phẩm</label>
     </div>
     <div class = "lblinput">
-        <input type="number" name="txtPrice" value="<?php echo isset($_POST["txtPrice"]) ? $_POST["txtprice"] : "" ; ?>" />
+        <input type="number" name="txtPrice" value="<?php echo isset($_POST["txtPrice"]) ? $_POST["txtPrice"] : "" ; ?>" />
     </div>
 </div>
 
@@ -44,7 +44,7 @@
         <label>Loại sản phẩm</label>
     </div>
     <div class = "lblinput">
-        <input type="text" name="txtCateID" value="<?php echo isset($_POST["txtCateID"]) ? $_POST["txtproduct"] : "" ?>" />
+        <input type="text" name="txtCateID" value="<?php echo isset($_POST["txtCateID"]) ? $_POST["txtCateID"] : "" ?>" />
     </div>
 </div>
 

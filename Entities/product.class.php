@@ -23,8 +23,8 @@
         public function save()
         {
             $db = new Db();
-            $sql = "INSERT INTO product (productName, cateId, price, quantity, descript, picture) VALUES
-            ( '$this->productName', '$this->cateID', '$this->price', '$this->quantity', '$this->descript', '$this->picture')";
+            $sql = "INSERT INTO product (productID ,productName, cateId, price, quantity, descript, picture) VALUES
+            ( '$this->productID','$this->productName', '$this->cateID', '$this->price', '$this->quantity', '$this->descript', '$this->picture')";
             $result = $db->query_execute($sql);
             $result;
         }
