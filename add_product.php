@@ -1,6 +1,6 @@
 
 <?php
-    require_once("/entities/product.class.php");
+    require_once("Entities/product.class.php");
 
     if(isset($_POST["btnsubmit"]))
     {
