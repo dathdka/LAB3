@@ -17,6 +17,7 @@
         foreach ( $prods as $item )
     {
         echo"<p> tên sản phẩm".$item["ProductName"]."</p>";
+        echo "<img src='$item[Picture]' style='width:40px'/>";
     }
         include_once("footer.php");
     ?>
