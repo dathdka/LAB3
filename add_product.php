@@ -1,7 +1,7 @@
 
 <?php
     require_once("Entities/product.class.php");
-
+    require_once("Entities/category.class.php");
     if(isset($_POST["btnsubmit"]))
     {
         $productName = $_POST["txtName"];
@@ -94,7 +94,15 @@
         <label>Loại sản phẩm</label>
     </div>
     <div class = "lblinput">
-        <input type="text" name="txtCateID" value="<?php echo isset($_POST["txtCateID"]) ? $_POST["txtCateID"] : "" ?>" />
+        <select name ="txtCateID">
+            <option value="" selected></option>
+            <?php
+            $cates = Category::list_categories();
+            foreach ($cates as $item) {
+                echo "<option value=".$item["CateID"].">".$item["CategoryName"]."</option>"; 
+            }
+            ?>
+        </select>
     </div>
 </div>
 
