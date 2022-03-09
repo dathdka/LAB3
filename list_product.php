@@ -1,25 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="site.css">
-    <link rel="stylesheet" href="index.html">
-</head>
-<body>
-    <?php 
-        require_once("Entities/product.class.php");
-    ?>
-    <?php
-        include_once("header.php");
-        $prods = Product::list_product();
-        foreach ( $prods as $item )
-    {
-        echo"<p> tên sản phẩm".$item["ProductName"]."</p>";
-        echo "<img src='$item[Picture]' style='width:40px'/>";
-    }
-        include_once("footer.php");
-    ?>
-</body>
-</html>
+
+<?php 
+    require_once("Entities/product.class.php");
+    include_once("header.php");
+    $prods = Product::list_product();
+?>
+<div class="container text-center">
+    <h1>Sản phẩm </h1>
+    <div class="row">
+        <?php
+            foreach ( $prods as $item )
+            {
+        ?>
+                <div class="col-sm-4">
+                    <img src="<?php echo $item["Picture"];?>" style="width:100px"/>
+                    <p class="text-danger"> <?php echo $item["ProductName"] ?></p>
+                    <p class="text-info"><?php  echo $item["Price"]?></p>
+                    <p>
+                        <button class="btn btn-primary" type="button">Mua hang</button>
+                    </p>
+                </div>
+            <?php 
+            }
+            include_once("footer.php");
+        ?>
+    </div>
+</div>

@@ -99,7 +99,7 @@
             <?php
             $cates = Category::list_categories();
             foreach ($cates as $item) {
-                echo "<option value=".$item["CateID"].">".$item["CategoryName"]."</option>"; 
+                echo "<option value= &nbsp;".$item["CateID"].">".$item["CategoryName"]."</option>"; 
             }
             ?>
         </select>
