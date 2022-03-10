@@ -17,7 +17,7 @@
             $db = new Db();
             $sql = "INSERT INTO category(CateID, CategoryName, Description) VALUES
             ('$this->CateID', '$this->CategoryName','$this->Description')";
-            $result = $db->execute($sql);
+            $result = $db->query_execute($sql);
             return $result;
         }
 

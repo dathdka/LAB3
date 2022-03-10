@@ -11,7 +11,8 @@
         $description = $_POST["txtDesc"];
         $uploadOk = 1;
         $target_dir = "uploads/";
-        $target_file = $target_dir. basename($_FILES["fileToUpload"]["name"]);
+        $timestamp = date("d"). date("m"). date("y").date("h").date("i").date("s");
+        $target_file = $target_dir.$timestamp. basename($_FILES["fileToUpload"]["name"]);
         if(file_exists($target_file))
         {
             echo "da trung anh";
@@ -99,7 +100,7 @@
             <?php
             $cates = Category::list_categories();
             foreach ($cates as $item) {
-                echo "<option value= &nbsp;".$item["CateID"].">".$item["CategoryName"]."</option>"; 
+                echo "<option value=".$item["CateID"].">".$item["CategoryName"]."</option>"; 
             }
             ?>
         </select>
