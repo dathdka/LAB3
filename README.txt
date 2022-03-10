@@ -7,3 +7,6 @@ Thái Trung Kiên - 1911061800
 
 
 Khoa Đạt Kiên Hào - 19110
+
+
+Terminal Bị gì áy nhỉ
