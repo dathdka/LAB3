@@ -9,7 +9,6 @@
         $price = $_POST["txtPrice"];
         $quantity = $_POST["txtQuantity"];
         $description = $_POST["txtDesc"];
-        $picture = $_POST["txtpic"];
         $uploadOk = 1;
         $target_dir = "uploads/";
         $timestamp = date("d"). date("m"). date("y").date("h").date("i").date("s");
@@ -32,7 +31,7 @@
             move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file);
         }
 
-        $newProduct = new Product( $productName, $cateID, $price, $quantity, $description, $target_file, $picture);
+        $newProduct = new Product( $productName, $cateID, $price, $quantity, $description, $target_file);
 
         $result = $newProduct -> save();
         if(!$result)
@@ -54,7 +53,7 @@
 ?>
 
 
-<form  method="POST" enctype="multipart/form-data">
+<form  method="post" enctype="multipart/form-data">
     <div class= "row">
         <div class = "lbltitle">
             <label>Tên sản phẩm</label>
@@ -114,12 +113,12 @@
         <label>Hình ảnh sản phẩm</label>
     </div>
     <div class = "lblinput">
-        <input type="file" id="txtpic" name="txtpic" accept= ".PNG,.GIF,.JPG">
+        <input type="file" name="fileToUpload" id="fileToUpload" accept= ".PNG,.GIF,.JPG">
     </div>
 </div>
 
 
-<! --gửi form-->
+<!--gửi form-->
 <div class = "row">
     <div class = "submit">
         <input type="submit" name="btnsubmit" text="Thêm sản phẩm" />

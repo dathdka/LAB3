@@ -22,16 +22,6 @@
 
         public function save()
         {
-            // xử lí hàm update hình ảnh
-            $file_temp = $this->picture['tmp_name'];
-            $user_file = $this->picture['name'];
-            $timestamp = date("Y").date("m").date("d").date("h").date("i").date("s");
-            $filepath = "uploads/".$timestamp.$user_file;
-            if(move_uploaded_file($file_temp, $filepath)== false)
-            {
-                return false;
-            }
-
             $db = new Db();
             $sql = "INSERT INTO product (productName, cateId, price, quantity, desscription, picture) VALUES
             ( '$this->productName', '$this->cateID', '$this->price', '$this->quantity', '$this->description', '$this->picture')";
@@ -47,6 +37,12 @@
             $result = $db->Select_to_array($sql);
             return $result;
         }
-
+        
+        public static function list_product_by_cateid($cateid){
+            $db = new Db();
+            $sql = "SELECT * FROM product WHERE CateID = '$cateid'";
+            $result = $db->select_to_array($sql);
+            return $result;
+        }
     }
 ?>

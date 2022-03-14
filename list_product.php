@@ -1,6 +1,7 @@
 
 <?php 
     require_once("Entities/product.class.php");
+    require_once("Entities/category.class.php");
     include_once("header.php");
     $prods = Product::list_product();
 ?>
