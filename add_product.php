@@ -119,7 +119,7 @@
 <! --gửi form-->
 <div class = "row">
     <div class = "submit">
-        <input type="submit" name="btnsubmit" value="Thêm sản phẩm" />
+        <input type="submit" name="btnsubmit" text="Thêm sản phẩm" />
     </div>
 </div>
 </form>
