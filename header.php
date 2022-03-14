@@ -1,11 +1,7 @@
 <!DOCTYPE html>
 <html lang="vi">
     <head>
-        <style>
-            body{
-                background-color:lightblue;
-            }
-        </style>
+       
         <meta charset="UTF-8">
         <meta name="author" content="Hoang Dat">
         <link href="/LAB3/site.css" rel="stylesheet">
