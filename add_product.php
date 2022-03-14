@@ -9,6 +9,7 @@
         $price = $_POST["txtPrice"];
         $quantity = $_POST["txtQuantity"];
         $description = $_POST["txtDesc"];
+        $picture = $_POST["txtpic"];
         $uploadOk = 1;
         $target_dir = "uploads/";
         $timestamp = date("d"). date("m"). date("y").date("h").date("i").date("s");
@@ -31,7 +32,7 @@
             move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file);
         }
 
-        $newProduct = new Product( $productName, $cateID, $price, $quantity, $description, $target_file);
+        $newProduct = new Product( $productName, $cateID, $price, $quantity, $description, $target_file, $picture);
 
         $result = $newProduct -> save();
         if(!$result)
@@ -107,14 +108,16 @@
     </div>
 </div>
 
+<!-- xu li hinh anh -->
 <div class = "row">
     <div class = "lbltitle">
         <label>Hình ảnh sản phẩm</label>
     </div>
     <div class = "lblinput">
-        <input type="file" name="fileToUpload" id="fileToUpload">
+        <input type="file" id="txtpic" name="txtpic" accept= ".PNG,.GIF,.JPG">
     </div>
 </div>
+
 
 <! --gửi form-->
 <div class = "row">
