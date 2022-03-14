@@ -6,12 +6,3 @@ Thái Trung Kiên - 1911061800
 
 
 
-ádsadasfsafas
-ádasdasffasdasd
-Khoa Đạt Kiên Hào - 19110
-
-
-Terminal Bị gì áy nhỉ
-aaaaaaaaaaaaaaaaaaaaaa
-bbbbbbbbbbbbbbbbbbbbbbb
-cccccccccccccccccccc
