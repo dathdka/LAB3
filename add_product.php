@@ -1,3 +1,15 @@
+<title>Them San Pham</title>
+
+<style>
+    .row{
+        text-align: center;
+        margin: 5px;
+        
+    }
+    body{
+                background-color:lightblue;
+            }
+</style>
 
 <?php
     require_once("Entities/product.class.php");
@@ -112,16 +124,16 @@
     <div class = "lbltitle">
         <label>Hình ảnh sản phẩm</label>
     </div>
-    <div class = "lblinput">
-        <input type="file" name="fileToUpload" id="fileToUpload" accept= ".PNG,.GIF,.JPG">
+    <div class = "lblinput" >
+        <button type="file"  style="background-color: #58257b;border-color:white;margin-bottom: 5px; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block;font-size: 16px;cursor: pointer; border-radius:10px" name="fileToUpload" id="fileToUpload" accept= ".PNG,.GIF,.JPG" >Upload File</button>
     </div>
 </div>
 
 
 <!--gửi form-->
-<div class = "row">
+<div class = "row" >
     <div class = "submit">
-        <input type="submit" name="btnsubmit" text="Thêm sản phẩm" />
+    <button type="submit" style="background-color: #58257b;border-color:white; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block;font-size: 16px;cursor: pointer; border-radius:10px" name="btnsubmit"> Xac Nhan </button>
     </div>
 </div>
 </form>
