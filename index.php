@@ -19,13 +19,11 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat"sans-serif;}
 
 
 <!-- Sidebar/menu -->
-<nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3; width:250px" id="mySidebar">
-  <div class="w3-container w3-display-container w3-padding-16">
-    <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
-    <h3 class="w3-wide"><b>LOGO</b></h3>
+<nav class="sidebar w3-bar-block white w3-collapse top" style="z-index:3; width:250px; left:0" id="mySidebar">
+  <div class="container display-container padding-16">
+    <h3 class="wide"><b>LOGO</b></h3>
   </div>
-
-  <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
+  <div class="padding-64 large text-grey" style="font-weight:bold">
     <a href="/LAB3/list_product.php" class="w3-bar-item w3-button" target="_blank" style="display: float;">Danh sách sản phẩm</a>
     <title>Web</title>
     <a href="/LAB3/add_product.php" class="w3-bar-item w3-button" target="_blank">Thêm sản phẩm</a>

@@ -16,8 +16,10 @@
             <div class="navbar navbar-default navbar-static-top" role="navigation">
                 <div class="container">
                     <div class="navbar-header">
-                        <a class="navbar-brand" href="/LAB3/list_product.php">Product List</a>
-                        <a class="navbar-brand" href="/LAB3/add_product.php">Add Product</a>
+                     <ul>
+                        <li><a class="navbar-brand" href="/LAB3/list_product.php">Product List</a> </li>
+                        <li><a class="navbar-brand" href="/LAB3/add_product.php">Add Product</a> </li>
+                     </ul>
                     </div>
                 </div>
             </div>
