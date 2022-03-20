@@ -44,5 +44,17 @@
             $result = $db->select_to_array($sql);
             return $result;
         }
+
+        public static function list_product_relate($cateid, $id){
+            $db = new Db();
+            $sql = "SELECT * FROM product WHERE CateID = '$cateid' AND ProductID !='$id'";
+            return $db->select_to_array($sql);
+        }
+
+        public static function get_product($id){
+            $db = new Db();
+            $sql = "SELECT * FROM product WHERE ProductID ='$id'";
+            return mysqli_fetch_object(mysqli_query($db->connect(),$sql));
+        }
     }
 ?>

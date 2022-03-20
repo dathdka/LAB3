@@ -125,7 +125,8 @@
         <label>Hình ảnh sản phẩm</label>
     </div>
     <div class = "lblinput" >
-        <button type="file"  style="background-color: #58257b;border-color:white;margin-bottom: 5px; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block;font-size: 16px;cursor: pointer; border-radius:10px" name="fileToUpload" id="fileToUpload" accept= ".PNG,.GIF,.JPG" >Upload File</button>
+        <!-- <button type="file"  style="background-color: #58257b;border-color:white;margin-bottom: 5px; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block;font-size: 16px;cursor: pointer; border-radius:10px" name="fileToUpload" id="fileToUpload" accept= ".PNG,.GIF,.JPG" >Upload File</button> -->
+        <input type="file" name="fileToUpload" id="fileToUpload" accept= ".PNG,.GIF,.JPG">
     </div>
 </div>
 
