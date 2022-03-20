@@ -1,0 +1,121 @@
+.row{
+    text-align: center;
+    margin: 5px;
+}
+
+.container{
+    padding:0.01em 16px
+}
+
+.display-container{
+    position:relative
+}
+
+.container-text-center {
+    width: 100%;
+}
+
+.container-text-center h1{
+    text-align: center; 
+    background-color:darkgrey;
+    width: 100%;
+}
+
+.navbar-header ul li{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.col-sm-4 {
+    display: inline-block;
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid black;
+}
+
+    div .col-sm-4 .btn-btn-primary{
+        background-color: violet; 
+        border: none; 
+        color: white; 
+        padding: 15px 32px; 
+        text-align: center; 
+        text-decoration: none; 
+        display: inline-block;
+        font-size: 16px;
+        cursor: pointer; 
+        border-radius:10px
+    }
+
+form{
+    width: 100%;
+    height: 100%;
+}
+
+.row .submit>button, .row .lblinput>button{
+    background-color: #58257b;
+    border-color:white; 
+    border: none; 
+    color: white; 
+    padding: 15px 32px; 
+    text-align: center; 
+    text-decoration: none; 
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer; 
+    border-radius:10px
+}
+
+.sidebar{
+    height:100%;
+    width:200px;
+    background-color:#fff;
+    position:fixed!important;
+    z-index:1;
+    overflow:auto;
+    display:block!important;
+    display:none;
+}
+
+.top{
+    position:fixed;
+    width:100%;
+    z-index:1;
+    top:0;
+}
+
+.white{
+    color:#000!important;
+    background-color:#fff!important;
+}
+
+.padding-16{
+    padding-top:16px!important;padding-bottom:16px!important;
+}
+
+.padding-64{
+    padding-top:64px!important;padding-bottom:64px!important
+}
+
+.wide{
+    letter-spacing:4px;
+}
+
+.text-grey{
+    color:#757575!important;
+}
+
+.large{
+    font-size:18px!important;
+}
+
+
+
+footer{
+    text-align: center; 
+    background-color:dimgrey; 
+    bottom:0;
+    width:100%;
+    position:fixed;
+}
