@@ -1,7 +1,43 @@
 .row{
     text-align: center;
-    margin: 5px;
+    margin-left: 25%;
+    float: left;
 }
+
+.navbar-listproduct h3{
+    text-align: center;
+}
+
+ .listproduct{
+    position: relative;
+    display: block;
+    padding: 0;
+    margin-bottom: -1px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+} 
+
+.navbar-listproduct ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 25%;
+    background-color: #f1f1f1;
+    height: 100%; 
+    position: absolute;
+  }
+  
+  .navbar-listproduct ul>li>a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+  }
+  
+  .navbar-listproduct ul li>a:hover{
+    background-color: #555;
+    color: white;
+    } 
 
 .container{
     padding:0.01em 16px
@@ -28,11 +64,12 @@
 }
 
 .col-sm-4 {
-    display: inline-block;
+    display:  block;
     text-align: center;
     margin: 20px;
     padding: 20px;
     border: 1px solid black;
+    box-sizing: inherit;
 }
 
     div .col-sm-4 .btn-btn-primary{
