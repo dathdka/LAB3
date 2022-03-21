@@ -15,10 +15,12 @@
 
         public function save() {
             $db = new Db();
-            $sql = "INSERT INTO category(CateID, CategoryName, Description) VALUES
-            ('$this->CateID', '$this->CategoryName','$this->Description')";
-            $result = $db->query_execute($sql);
-            return $result;
+            $conn = $db->connect();
+            $sql = $conn->prepare("INSERT INTO category(CateID, CategoryName, Description) VALUES
+            (?, ?,?)");
+            $sql->bind_param("iss","$this->CateID,$this->CategoryName,$this->Description");
+            return $sql->execute();
+            
         }
 
         public static function list_categories() {

@@ -37,9 +37,10 @@
                     <img src="<?php echo $item["Picture"];?>" style="width:100px"/>
                     <p class="text-danger"> <?php echo $item["ProductName"] ?></p>
                     <p class="text-info"><?php  echo $item["Price"]?></p>
-                    <p>
-                        <button class="btn-btn-primary" type="button">Mua hang</button>
-                    </p>
+                        <a href="product_detail.php?id=<?php echo $item["ProductID"] ?>">
+                            <button type="button" class="btn btn-primary" >Mua hàng</button>
+                    </a>
+
                 </div>
             <?php 
             }

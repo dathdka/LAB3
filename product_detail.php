@@ -7,7 +7,7 @@ if (!isset($_GET["id"])) {
 } else {
     $id = $_GET["id"];
     $prod = Product::get_product($id);
-    $prod_relate = Product::list_product_relate($prod->CateID, $id);
+    $prod_relate = Product::list_product_relate($prod["CateID"], $id);
 }
 $cates = Category::list_categories();
 
@@ -22,10 +22,10 @@ $cates = Category::list_categories();
     ?>
 </div>
 <div class="col-sm-4" style="display:inline-block; text-align:center; margin:20px; padding:20px; ;border:1px solid black;  ">
-    <img src="<?php echo $prod->Picture; ?>" style="width:100px" />
-    <p class="text-danger"> <?php echo $prod->ProductName ?></p>
-    <p class="text-info"><?php echo $prod->Desscription ?></p>
-    <p class="text-info"><?php echo $prod->Price ?></p>
+    <img src="<?php echo $prod["Picture"]; ?>" style="width:100px" />
+    <p class="text-danger"> <?php echo $prod["ProductName"] ?></p>
+    <p class="text-info"><?php echo $prod["Desscription"] ?></p>
+    <p class="text-info"><?php echo $prod["Price"] ?></p>
     <p>
         <button class="btn btn-primary" type="button" style="background-color: #58257b; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block;font-size: 16px;cursor: pointer; border-radius:10px">Mua hang</button>
     </p>
