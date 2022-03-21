@@ -3,7 +3,7 @@
     require_once("Entities/product.class.php");
     require_once("Entities/category.class.php");
     include_once("header.php");
-    
+
     if(!isset($_GET["cateid"])){
         $prods = Product::list_product();
     }
@@ -28,7 +28,7 @@
         ?>
         </ul>
     </div>
-    <div class="row">
+    <div class="row row-listproduct">
         <?php
             foreach ( $prods as $item )
             {

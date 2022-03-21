@@ -1,15 +1,8 @@
 <title>Them San Pham</title>
-<style>
-    body{
-       background-color: rgb(250,235,215);
-        }
-</style>
-
-
 <?php
     require_once("Entities/product.class.php");
     require_once("Entities/category.class.php");
-    require_once("header.php");
+    include_once("header.php");
     if(isset($_POST["btnsubmit"]))
     {
         $productName = $_POST["txtName"];
@@ -120,9 +113,9 @@
     <div class = "lbltitle">
         <label>Hình ảnh sản phẩm</label>
     </div>
-    <div class = "lblinput" >
+    <div class = "lblinput button-images">
         <!-- <button type="file"  style="background-color: #58257b;border-color:white;margin-bottom: 5px; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block;font-size: 16px;cursor: pointer; border-radius:10px" name="fileToUpload" id="fileToUpload" accept= ".PNG,.GIF,.JPG" >Upload File</button> -->
-        <input type="file" name="fileToUpload" id="fileToUpload" accept= ".PNG,.GIF,.JPG">
+        <input type="file" name="fileToUpload" id="fileToUpload" accept= ".PNG,.GIF,.JPG" display="none">
     </div>
 </div>
 

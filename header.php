@@ -14,7 +14,7 @@
         <div id="wrapper">
             <h2>Web Ban Hang</h2>
             <div class="navbar navbar-default navbar-static-top" role="navigation">
-                <div class="container">
+                <div class="container" style="display: grid">
                     <div class="navbar-header">
                      <ul>
                         <li><a class="navbar-brand" href="/LAB3/list_product.php">Product List</a> </li>
