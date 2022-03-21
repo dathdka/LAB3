@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <div id="wrapper">
+        < id="wrapper">
             <h2>Web Ban Hang</h2>
             <div class="navbar navbar-default navbar-static-top" role="navigation">
                 <div class="container" style="display: grid">
@@ -21,6 +21,15 @@
                         <li><a class="navbar-brand" href="/LAB3/add_product.php">Add Product</a> </li>
                      </ul>
                     </div>
-                </div>
+                </div>  
             </div>
-            
+
+    <div class="sidebar-left ">
+   <ul class="sidebar-menu">
+    <h3 class="sidebar-title">Danh Mục</h3>
+        <li class="has-child"><a href="/LAB3/list_product.php?cateid=1" >Laptop<i class="icon"></i></a> </li>
+        <li class="has-child"><a href="/LAB3/list_product.php?cateid=2" >Máy tính bảng <i class="icon"></i></a> </li>
+        <li class="has-child"><a href="/LAB3/list_product.php?cateid=3" >Điện thoại <i class="icon"></i></a> </li>
+        <li class="has-child"><a href="/LAB3/list_product.php?cateid=4" >Đồng hồ <i class="icon"></i></a> </li>
+    </ul>
+</div>          

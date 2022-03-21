@@ -1,8 +1,9 @@
 <title>Them San Pham</title>
+<link rel="stylesheet" href="style.css">
 <?php
     require_once("Entities/product.class.php");
     require_once("Entities/category.class.php");
-    include_once("header.php");
+    // include_once("header.php");
     if(isset($_POST["btnsubmit"]))
     {
         $productName = $_POST["txtName"];

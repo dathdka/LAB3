@@ -20,12 +20,12 @@
     <div class="navbar-listproduct"> 
         <ul>
         <h3>Danh mục</h3>
-        <?php
+        <!-- <?php
             foreach($cates as $item){
                 echo "<li class='list-group-item listproduct'><a
                 href=/LAB3/list_product.php?cateid=".$item["CateID"].">".$item["CategoryName"]."</a></li>";
             }
-        ?>
+        ?> -->
         </ul>
     </div>
     <div class="row row-listproduct">
@@ -33,7 +33,7 @@
             foreach ( $prods as $item )
             {
         ?>
-                <div class="col-sm-4">
+               <div class="col-sm-4">
                     <img src="<?php echo $item["Picture"];?>" style="width:100px"/>
                     <p class="text-danger"> <?php echo $item["ProductName"] ?></p>
                     <p class="text-info"><?php  echo $item["Price"]?></p>
