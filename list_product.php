@@ -13,22 +13,12 @@
     }
     $cates = Category::list_categories();
 ?>
+
 <div class="container-text-center">
     <div>
         <h1>Sản phẩm</h1>
     </div>
-    <div class="navbar-listproduct"> 
-        <ul>
-        <h3>Danh mục</h3>
-        <!-- <?php
-            foreach($cates as $item){
-                echo "<li class='list-group-item listproduct'><a
-                href=/LAB3/list_product.php?cateid=".$item["CateID"].">".$item["CategoryName"]."</a></li>";
-            }
-        ?> -->
-        </ul>
-    </div>
-    <div class="row row-listproduct">
+    <div class="row">
         <?php
             foreach ( $prods as $item )
             {

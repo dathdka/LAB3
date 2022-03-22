@@ -13,7 +13,7 @@ $cates = Category::list_categories();
 
 ?>
 
-<div class="col-sm-4" style="display:inline-block; text-align:center; margin:20px; padding:20px ;border:1px solid black;  ">
+<div class="col-sm-4" style="display:inline-block; text-align:center; margin:20px; padding:20px ;border:1px solid black; float:initial; ">
     <img src="<?php echo $prod["Picture"]; ?>" style="width:100px" />
     <p class="text-danger"> <?php echo $prod["ProductName"] ?></p>
     <p class="text-info"><?php echo $prod["Desscription"] ?></p>
@@ -25,7 +25,6 @@ $cates = Category::list_categories();
 
 <p>SẢN PHẨM LIÊN QUAN</p>
 <div class="row">
-    <div class="col-md-4"></div>
 <div class="col-md-8" style="display:inline-block; text-align:center; margin:20px; padding:20px; ;border:1px solid black;  ">
     <?php
     foreach ($prod_relate as $item) {

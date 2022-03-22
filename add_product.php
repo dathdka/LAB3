@@ -55,7 +55,8 @@
 ?>
 
 
-<form  method="post" enctype="multipart/form-data">
+<form  method="post" enctype="multipart/form-data" style="height: 100%;width: 100%; position: relative; text-align:center ;background-color:mintcream">
+    <div class="form-group">
     <div class= "row">
         <div class = "lbltitle">
             <label>Tên sản phẩm</label>
@@ -127,5 +128,7 @@
     <button type="submit" name="btnsubmit"> Xac Nhan </button>
     </div>
 </div>
+</div>
 </form>
+
 <?php include_once("footer.php"); ?>
