@@ -24,8 +24,9 @@
                 </div>  
             </div>
 
-<div class="clearfix">
-    <div class="box-left">
+
+    <div class="clearfix">
+        <div class="box-left">
             <ul class="sidebar-menu">
                 <h3 class="sidebar-title">Danh Mục</h3>
                 <li class="has-child"><a href="/LAB3/list_product.php?cateid=1" >Laptop<i class="icon"></i></a> </li>
@@ -33,5 +34,5 @@
                 <li class="has-child"><a href="/LAB3/list_product.php?cateid=3" >Điện thoại <i class="icon"></i></a> </li>
                 <li class="has-child"><a href="/LAB3/list_product.php?cateid=4" >Đồng hồ <i class="icon"></i></a> </li>
             </ul>
-    </div>  
-</div>
+        </div>  
+    </div>
