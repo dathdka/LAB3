@@ -17,7 +17,7 @@ $cates = Category::list_categories();
     <div style="background-color: darkgray; text-align: center; display: block; padding: 0.2px 0 0.1px 0;">
             <h1>Sản phẩm</h1>
     </div>
-    <div class="col-sm-4" style="display:inline-block; text-align:center; margin:20px; padding:20px ;border:1px solid black; float:initial;width: -webkit-fill-available;">
+    <div class="col-sm-4" style="display:inline-block; text-align:center; margin:20px; padding:20px ;border:1px solid black; width: -webkit-fill-available;">
             <div class="product-img" style="float: left;">
                 <img src="<?php echo $prod["Picture"]; ?>" style="width: 300px;" />
             </div>  
@@ -32,7 +32,7 @@ $cates = Category::list_categories();
     </div>
 </div>
 <div class="row" style="width: 85%;float: right;" >
-    <div style="background-color: darkgray; text-align: center; display: block; padding: 0.2px 0 0.1px 0;">
+    <div style="background-color:darkgray; text-align:center; display:block; padding: 0.2px 0 0.1px 0;">
         <h2>SẢN PHẨM LIÊN QUAN</h2>
     </div>
 
@@ -40,7 +40,7 @@ $cates = Category::list_categories();
     <?php
     foreach ($prod_relate as $item) {
     ?>
-    <div class="col-md-4 col-sm-6 col-xs-12 pro-loop" style="text-align: center; padding: 22px;">
+    <div class="col-md-4 col-sm-6 col-xs-12 pro-loop" style="text-align:center; padding:22px;">
         <div class="product-block">
             <div class="product-img">
                 <a href="/LAB3/product_detail.php?id=<?php echo $item["ProductID"]; ?>">
