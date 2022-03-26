@@ -27,7 +27,9 @@ $cates = Category::list_categories();
                 <p class="text-info"    style="font-size: 15px;"><?php echo $prod["Price"] ?></p>
             </div>
             <p>
-                <button class="btn btn-primary" type="button" >Mua hang</button>
+                <button type="button" class="btn btn-primary"
+                onclick="location.href='/LAB3/shopping_cart.php?id=<?php 
+                echo $prod['ProductID']; ?>'" >Mua hàng</button>
             </p>
     </div>
 </div>
@@ -52,7 +54,11 @@ $cates = Category::list_categories();
                 <p class="text-info"><?php echo $item["Desscription"] ?></p>
                 <p class="text-info"><?php echo $item["Price"] ?></p>
             </div>
-                <button class="btn btn-primary" type="button">Mua hang</button>
+            <p>
+                <button type="button" class="btn btn-primary"
+                onclick="location.href='/LAB3/shopping_cart.php?id=<?php 
+                echo $item['ProductID']; ?>'" >Mua hàng</button>
+            </p>
         </div>
     </div>
     <?php

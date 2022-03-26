@@ -31,9 +31,9 @@
                         <p class="text-danger"> <?php echo $item["ProductName"] ?></p>
                         <p class="text-info"><?php  echo $item["Price"]?></p>
                         </div>
-                            <a href="product_detail.php?id=<?php echo $item["ProductID"] ?>">
-                            <button type="button" class="btn btn-primary">Mua hàng</button>
-                            </a>
+                        <a href="product_detail.php?id=<?php echo $item["ProductID"] ?>">
+                            <button type="button" class="btn btn-primary">Xem chi tiết</button>
+                        </a>
                     </div>
                 </div>
             <?php 

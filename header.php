@@ -11,6 +11,11 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
+        
+        <?php 
+        require_once("Entities/category.class.php");
+        $cates = Category::list_categories(); 
+        ?>
         <!-- < id="wrapper"> -->
             <h2>Web Ban Hang</h2>
             <div class="navbar navbar-default navbar-static-top" role="navigation">
@@ -19,6 +24,7 @@
                      <ul>
                         <li><a class="navbar-brand" href="/LAB3/list_product.php">Product List</a> </li>
                         <li><a class="navbar-brand" href="/LAB3/add_product.php">Add Product</a> </li>
+                        <li><a class="navbar-brand" href="/LAB3/shopping_cart.php">Cart</a> </li>
                      </ul>
                     </div>
                 </div>  
@@ -29,10 +35,13 @@
         <div class="box-left">
             <ul class="sidebar-menu">
                 <h3 class="sidebar-title">Danh Mục</h3>
-                <li class="has-child"><a href="/LAB3/list_product.php?cateid=1" >Laptop<i class="icon"></i></a> </li>
-                <li class="has-child"><a href="/LAB3/list_product.php?cateid=2" >Máy tính bảng <i class="icon"></i></a> </li>
-                <li class="has-child"><a href="/LAB3/list_product.php?cateid=3" >Điện thoại <i class="icon"></i></a> </li>
-                <li class="has-child"><a href="/LAB3/list_product.php?cateid=4" >Đồng hồ <i class="icon"></i></a> </li>
+                <?php
+                    foreach($cates as $item){
+                        echo "<li class='has-child'><a
+                        href='/LAB3/list_product.php?'cateid=".$item["CateID"].">".$item["CategoryName"]."</a></li>";
+                    }
+                ?>
             </ul>
         </div>  
     </div>
+
