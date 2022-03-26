@@ -38,7 +38,7 @@
                 <?php
                     foreach($cates as $item){
                         echo "<li class='has-child'><a
-                        href='/LAB3/list_product.php?'cateid=".$item["CateID"].">".$item["CategoryName"]."</a></li>";
+                        href='/LAB3/list_product.php?cateid=".$item["CateID"]."'>".$item["CategoryName"]."</a></li>";
                     }
                 ?>
             </ul>
