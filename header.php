@@ -14,6 +14,9 @@
         
         <?php 
         require_once("Entities/category.class.php");
+
+        session_start();
+
         $cates = Category::list_categories(); 
         ?>
         <!-- < id="wrapper"> -->
@@ -25,6 +28,12 @@
                         <li><a class="navbar-brand" href="/LAB3/list_product.php">Product List</a> </li>
                         <li><a class="navbar-brand" href="/LAB3/add_product.php">Add Product</a> </li>
                         <li><a class="navbar-brand" href="/LAB3/shopping_cart.php">Cart</a> </li>
+                        <?php if(isset($_SESSION["user"])){ ?>
+                            <li><a href="/LAB3/logout.php" class="navbar-brand">Logout</a></li>
+                        <?php }else{ ?>
+                            <li><a href='/LAB3/login.php' class="navbar-brand">Login</a></li>
+                            <li><a href='/LAB3/register.php' class="navbar-brand">Register</a></li>
+                        <?php } ?>
                      </ul>
                     </div>
                 </div>  

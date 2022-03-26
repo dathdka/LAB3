@@ -24,9 +24,9 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat"sans-serif;}
     <h3 class="wide"><b>LOGO</b></h3>
   </div>
   <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
-    <a href="/LAB3/list_product.php" class="w3-bar-item w3-button" target="_blank" style="display: float;">Danh sách sản phẩm</a>
+    <a href="/LAB3/list_product.php" class="w3-bar-item w3-button"  style="display: float;">Danh sách sản phẩm</a>
     <title>Web</title>
-    <a href="/LAB3/add_product.php" class="w3-bar-item w3-button" target="_blank">Thêm sản phẩm</a>
+    <a href="/LAB3/add_product.php" class="w3-bar-item w3-button" >Thêm sản phẩm</a>
   </div>
 </nav>
 <?php include_once("footer.php");?>
