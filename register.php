@@ -21,13 +21,13 @@
             echo "<h1>Đăng ký thành công</h1>";
         }
     }
-
 ?>
 
 <body style="display: grid;font-family: 'Open Sans', sans-serif;line-height: 1.5;place-items: center;">
 <div id="register">
 <form method="POST" >
     <fieldset>
+    <legend>Register</legend>
     <!-- <div class="form-group row"> -->
         <label for="txtname">
             Username:

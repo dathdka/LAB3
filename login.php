@@ -19,6 +19,7 @@ if(isset($_POST["btn-login"])){
 <div id="login">
 <form method="POST">
     <fieldset>
+    <legend>Login</legend>
     <!-- <div class="form-group row"> -->
         <label for="txtname">
             Username:

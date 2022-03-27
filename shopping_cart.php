@@ -3,7 +3,6 @@
     require_once("Entities/product.class.php");
     require_once("Entities/category.class.php");
     $cates = Category::list_categories();
-    session_start();
 
     error_reporting(E_ALL);
     ini_set('display_errors','1');
@@ -32,10 +31,8 @@
         header("Location: shopping_cart.php");
     }
 ?>
-    <div class="container text-center" >
-        
-        <div class="col-sm-9" >
-        
+    <div class="container-fluid text-center" >
+        <div class="col-sm-10" >
             <h3>Thông tin giỏ hàng</h3><br>
             <table class="table table-condensed">
                 <thead>
