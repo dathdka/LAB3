@@ -33,7 +33,7 @@ $cates = Category::list_categories();
             </p>
     </div>
 </div>
-<div class="row" style="width: 85%;float: right;" >
+<div class="row" style="width: 85%;float:right;" >
     <div style="background-color:darkgray; text-align:center; display:block; padding: 0.2px 0 0.1px 0;">
         <h2>SẢN PHẨM LIÊN QUAN</h2>
     </div>

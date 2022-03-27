@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="style.css">
 <?php
 require_once("Entities/user.class.php");
 session_start();
@@ -14,26 +15,32 @@ if(isset($_POST["btn-login"])){
     }
 }
 ?>
+<body style="display: grid;font-family: 'Open Sans', sans-serif;line-height: 1.5;place-items: center;">
+<div id="login">
 <form method="POST">
-    <div class="form-group row">
+    <fieldset>
+    <!-- <div class="form-group row"> -->
         <label for="txtname">
             Username:
         </label>
         <div class="col-sm-10">
             <input type="text" class="form-control" placeholder="Username" name="txtname">
         </div>
-    </div>
-    <div class="form-group row">
+    <!-- </div> -->
+    <!-- <div class="form-group row"> -->
         <label for="txtemail">
             Password:
         </label>
         <div class="col-sm-10">
             <input type="text" class="form-control" placeholder="Password" name="txtpass">
         </div>
-    </div>
-    <div class="form-group row">
+    <!-- </div> -->
+    <!-- <div class="form-group row"> -->
         <div class="col-sm-offset-2 col-sm-10">
             <input type="submit" name="btn-login" value="Login">
         </div>
-    </div>
+    <!-- </div> -->
+</fieldset>
 </form>
+</div>
+</body>
