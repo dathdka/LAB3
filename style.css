@@ -251,6 +251,9 @@ html, body{
 	width: 280px;
 }
 
+#shopcard-text-center th{
+    text-align: center;
+}
 
 footer{
     text-align: center; 

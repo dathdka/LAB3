@@ -36,7 +36,7 @@
             <h3>Thông tin giỏ hàng</h3><br>
             <table class="table table-condensed">
                 <thead>
-                    <tr>
+                    <tr id="shopcard-text-center">
                         <th>Tên sản phẩm</th>
                         <th>Hình ảnh</th>
                         <th>Số lượng</th>
